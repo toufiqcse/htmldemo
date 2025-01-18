@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical drawings for Piaggio Beverly</title>
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+      body {
+        font-family: "Muli", sans-serif;
+        line-height: 1.6;
+      }
+
+      .rez_wedouz_container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 0px;
+      }
+
+      .rez_wedouz_breadcrumbs {
+        margin-bottom: 20px;
+      }
+
+      .rez_wedouz_breadcrumbs a {
+        color: #244d80;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      .rez_wedouz_active_breadcrumbs {
+        text-decoration: underline;
+      }
+
+      .rez_wedouz_partsheading{
+        color: #244d80;
+        font-weight: 700;
+        font-size: 30px;
+      }
+
+      .rez_wedouz_breadcrumbs span {
+        margin: 0 5px;
+        color: #244d80;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .rez_wedouz_subheading{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin: 0px 0 40px 0;
+      }
+
+      .rez_wedouz_subheading_content{
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+      }
+
+      .rez_wedouz_subheading_content h4{
+        color: #244d80;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .rez_wedouz_subheading_content p{
+        font-weight: 400;
+        font-size: 17px;
+      }
+
+      /* item paren section */
+      .rez_wedouz_item_box {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+
+
+/* item display here */
+
+      .rez_wedouz_parts_grid {
+        display: grid;
+        margin: 0 auto; 
+        gap: 0px; 
+        justify-content: center; 
+        align-items: start;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .rez_wedouz_parts_grid  :hover{
+        cursor: pointer;
+      }
+
+      .rez_wedouz_article_group{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       border: 1px solid #eee;
+       padding: 8px 10px;
+       overflow: hidden;
+      }
+
+
+      .rez_wedouz_article_group a{
+        color: #244d80;
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+
+      .rez_wedouz_image_wrapper {
+       width: 100%; 
+        height: 130px; 
+        overflow: hidden;
+        }
+        .rez_wedouz_image_wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; 
+          display: block;
+        }
+
+      
+        /* item display section */
+
+        .rez_wedouz_item_option{
+          display: flex;
+          flex-direction: column;
+          justify-items: start;
+          margin-bottom: 20px;
+        }
+        .rez_wedouz_itemShow{
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: end;
+          margin-top: -80px;
+          z-index: -1;
+        }
+
+        .rez_wedouz_itemShow img {
+          width: 60%;
+          align-content: end;
+        }
+
+        .rez_wedouz_item_option_heading h4{
+        color: #244d80;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .rez_wedouz_item_option_heading p{
+        font-weight: 400;
+        font-size: 17px;
+      }
+        
+      /* side item */
+      .rez_wedouz_parts_grid_sideShow {
+        display: grid;
+        margin: 0 auto; 
+        gap: 8px; 
+        justify-content: center; 
+        align-items: start;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+       
+      }
+
+      .rez_wedouz_parts_grid_sideShow:hover{
+        cursor: pointer;
+      }
+
+      .rez_wedouz_article_group_side{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       border: 1px solid #292828;
+      }
+
+      .rez_wedouz_article_group_side a{
+        color: #244d80;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+
+
+
+
+      /* ==================smalll desktop================= */
+      @media (min-width: 992px) and (max-width: 1199px){
+        .rez_wedouz_breadcrumbs {
+        margin-bottom: 15px;
+        padding: 0 10px;
+      }
+
+      .rez_wedouz_partsheading{
+        padding: 0 10px;
+        
+      }
+
+      .rez_wedouz_subheading{
+        padding: 0 10px;
+        align-items: start;
+      }
+
+
+      .rez_wedouz_subheading_content h4{
+        font-weight: 500;
+        font-size: 17px;
+      }
+      .rez_wedouz_subheading_content p{
+        font-weight: 400;
+        font-size: 15px;
+      }
+      .rez_wedouz_subheading_image {
+        max-width: 100%;
+      }
+        
+        .rez_wedouz_parts_grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      
+      
+      }
+
+      /* =====================tablet========== */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .rez_wedouz_breadcrumbs {
+        margin-bottom: 15px;
+        padding: 0 10px;
+      }
+
+      .rez_wedouz_partsheading{
+        padding: 0 10px;
+        
+      }
+
+      .rez_wedouz_subheading{
+        padding: 0 10px;
+        align-items: start;
+      }
+
+
+      .rez_wedouz_subheading_content h4{
+        font-weight: 500;
+        font-size: 17px;
+      }
+      .rez_wedouz_subheading_content p{
+        font-weight: 400;
+        font-size: 15px;
+      }
+      .rez_wedouz_subheading_image {
+        max-width: 100%;
+      }
+        
+        .rez_wedouz_parts_grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .rez_wedouz_item_box {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .rez_wedouz_parts_grid_sideShow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      }
+
+/* fo================ mobile====================== */
+@media (min-width: 280px) and (max-width: 767px) {
+
+  .rez_wedouz_breadcrumbs {
+        margin-bottom: 15px;
+        padding: 0 10px;
+      }
+
+      .rez_wedouz_partsheading{
+        padding: 0 10px;
+        
+      }
+
+      .rez_wedouz_subheading{
+        padding: 0 10px;
+        align-items: start;
+      }
+
+
+      .rez_wedouz_subheading_content h4{
+        font-weight: 500;
+        font-size: 17px;
+      }
+      .rez_wedouz_subheading_content p{
+        font-weight: 400;
+        font-size: 15px;
+      }
+      .rez_wedouz_subheading_image {
+        max-width: 100%;
+      }
+
+      .rez_wedouz_parts_grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .rez_wedouz_item_box {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .rez_wedouz_parts_grid_sideShow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+      
+
+
+
+
+     
+    </style>
+  </head>
+  <body class="rez_wedouz_container">
+    <div class="">
+      <!-- breadcrumbs -->
+      <div class="rez_wedouz_breadcrumbs">
+        <a href="#">Home</a> <span>></span> <a href="#">Parts</a> <span>></span> 
+         <a href="#">Orginal parts</a>  <span>></span>  <a href="#">Piaggo</a> <span>></span> 
+         <a href="#">Scooters  </a>  <span>></span> 
+         <a href="#">Beverly </a>
+         <a href="#">Scooters  </a>  <span>></span> 
+         <a href="#">Beverly 125 E1 2001-2003 (EMEA)   </a>
+      </div>
+
+      <!-- heading -->
+      <h2 class="rez_wedouz_partsheading">Technical drawings for Piaggio Beverly 125 E1 2001-2003 (EMEA)</h2>
+        <div class="rez_wedouz_subheading">
+          <div class="rez_wedouz_subheading_content">
+            <h4>Select technical drawing</h4>
+            <p>Click below on the drawing showing the part you are looking for for your Piaggio Beverly 125 E1 2001-2003 (EMEA).</p>
+          </div>
+          <div class="rez_wedouz_subheading_image">
+            <img src="https://cdn-pics.easyparts.nl/sitepics/logos/logo15.gif" 
+                 alt="Piaggio">
+          </div>
+        </div>
+    </div>
+
+    
+    <!-- item display section -->
+    <div class="rez_wedouz_item_box">
+      <!-- 1 -->
+      <div>
+        <div class="rez_wedouz_parts_grid">
+          <!-- 1 -->
+          <div class="rez_wedouz_article_group">
+              <div class="rez_wedouz_image_wrapper">
+                <img src="https://cdn-pics.easyparts.nl/drawings/BEVERLY_125_1998-2005_128544.png" alt="scotyy">
+              </div>
+              <a href="#">Air Filter</a>
+          </a>
+          </div>
+          <!-- 2 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+              <img src="https://cdn-pics.easyparts.nl/drawings/tn/BEVERLY_125_1998-2005_128545.png" alt="scotyy">
+    
+            </div>
+              <a href="#">Battery</a>
+          </a>
+          </div>
+          <!-- 3 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+              <img src="https://cdn-pics.easyparts.nl/drawings/tn/BEVERLY_125_1998-2005_128546.png" alt="scotyy">
+    
+            </div>
+              <a href="#">Cobalt </a>
+          </a>
+          </div>
+          <!-- 4 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+    
+              <img src="https://cdn-pics.easyparts.nl/drawings/tn/BEVERLY_125_1998-2005_128547.png" alt="scotyy">
+            </div>
+              <a href="#">Brake</a>
+          </a>
+          </div>
+    
+          <!-- 5 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+              <img src="https://cdn-pics.easyparts.nl/drawings/tn/BEVERLY_125_1998-2005_128548.png" alt="scotyy">
+    
+            </div>
+              <a href="#">Carburator</a>
+          </a>
+          </div>
+          <!-- 6 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+              <img src="https://cdn-pics.easyparts.nl/drawings/tn/BEVERLY_125_1998-2005_128550.png" alt="scotyy">
+    
+            </div>
+              <a href="#">Case helmate</a>
+          </a>
+          </div>
+          <!-- 7 -->
+          <div class="rez_wedouz_article_group">
+            <div class="rez_wedouz_image_wrapper">
+    
+              <img src="https://cdn-pics.easyparts.nl/drawings/BEVERLY_125_1998-2005_128544.png" alt="scotyy">
+            </div>
+              <a href="#">Air Filter</a>
+          </a>
+          </div>
+          
+          
+    
+    
+        </div>
+      </div>
+      <!-- 2 -->
+      <div>
+        <div class="rez_wedouz_item_option">
+          <div class="rez_wedouz_itemShow">
+            <img src="https://cdn-pics.easyparts.nl/models/15072.jpg" alt="bike">
+            <a href="#">
+              <img src="https://cdn-pics.easyparts.nl/sitepics/banner_vast_9_nl.png" alt="bike">
+            </a>
+          </div>
+        </div>
+
+        <div class="rez_wedouz_item_option_heading">
+              <h4>Best selling parts for Piaggio Beverly 125 E1 2001-2003 (EMEA)</h4>
+              <p>Click below to go directly to the best-selling parts.</p>
+        </div>
+
+        <!-- product list grid -->
+        <div>
+          <div class="rez_wedouz_parts_grid_sideShow">
+            <!-- 1 -->
+            <div class="rez_wedouz_article_group_side">
+                <div class="rez_wedouz_image_wrapper">
+                  <img src="https://cdn-pics.easyparts.nl/models/2320.jpg" alt="scotyy">
+                </div>
+                <a href="#">Beverly 125</a>
+            </a>
+            </div>
+            <!-- 2 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+                <img src="https://cdn-pics.easyparts.nl/models/12707.jpg" alt="scotyy">
+      
+              </div>
+                <a href="#">Beverly 200</a>
+            </a>
+            </div>
+            <!-- 3 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+                <img src="https://cdn-pics.easyparts.nl/models/2321.jpg" alt="scotyy">
+      
+              </div>
+                <a href="#">Beverly 250 </a>
+            </a>
+            </div>
+            <!-- 4 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+      
+                <img src="https://cdn-pics.easyparts.nl/models/6271.jpg" alt="scotyy">
+              </div>
+                <a href="#">Beverly 300</a>
+            </a>
+            </div>
+      
+            <!-- 5 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+                <img src="https://cdn-pics.easyparts.nl/models/12403.jpg" alt="scotyy">
+      
+              </div>
+                <a href="#">Beverly</a>
+            </a>
+            </div>
+            <!-- 6 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+                <img src="https://cdn-pics.easyparts.nl/models/3608.jpg" alt="scotyy">
+      
+              </div>
+                <a href="#">Beverly 400 </a>
+            </a>
+            </div>
+            <!-- 7 -->
+            <div class="rez_wedouz_article_group_side">
+              <div class="rez_wedouz_image_wrapper">
+      
+                <img src="https://cdn-pics.easyparts.nl/models/2324.jpg" alt="scotyy">
+              </div>
+                <a href="#">Beverly 500</a>
+            </a>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
